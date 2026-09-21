@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>A.H.R | Projects & Files</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+
+    </div>
+
+
+
+    <main class="container">
+
+
+        <!-- =================================================
+             PROFILE
+        ================================================== -->
+
+        <section class="profile">
+
+            <div class="cover">
+
+                <img
+                    src="gg2.png"
+                    alt="A.H.R Cover"
+                >
+
+            </div>
+
+
+            <div class="profile-ring">
+
+                <img
+                    src="gg.png"
+                    alt="A.H.R"
+                >
+
+            </div>
+
+
+            <h1>A.H.R</h1>
+
+            <p>
+                🎬 Editing • Projects • Files
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SOCIAL
+        ================================================== -->
+
+        <section class="social-links">
+
+
+            <a
+                href="https://www.tiktok.com/@a.h.r__1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social"
+            >
+
+                <i class="fa-brands fa-tiktok"></i>
+
+                <span>
+
+                    TikTok
+
+                    <small>
+                        @a.h.r__1
+                    </small>
+
+                </span>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+
+            <a
+                href="https://www.youtube.com/@A.H.R_1"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social"
+            >
+
+                <i class="fa-brands fa-youtube"></i>
+
+                <span>
+
+                    YouTube
+
+                    <small>
+                        @A.H.R_1
+                    </small>
+
+                </span>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+
+            <a
+                href="https://t.me/Q_A_R_0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social"
+            >
+
+                <i class="fa-brands fa-telegram"></i>
+
+                <span>
+
+                    Telegram
+
+                    <small>
+                        @Q_A_R_0
+                    </small>
+
+                </span>
+
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECTS
+        ================================================== -->
+
+        <section class="files-section">
+
+
+            <div class="section-title">
+
+                <h2>
+                    🎬 المشاريع والملفات
+                </h2>
+
+                <span>
+                    Projects • Files • Resources
+                </span>
+
+            </div>
+
+
+            <div id="fileList">
+
+                <div class="empty-files">
+
+                    جاري تحميل الملفات...
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             UPLOAD
+        ================================================== -->
+
+        <section class="admin">
+
+
+            <h2>
+                📤 رفع ملفات
+            </h2>
+
+
+            <!-- PASSWORD -->
+
+            <div class="password-box">
+
+                <input
+                    type="password"
+                    id="adminPassword"
+                    placeholder="أدخل كلمة المرور"
+                    autocomplete="off"
+                >
+
+                <button
+                    type="button"
+                    onclick="login()"
+                >
+
+                    <i class="fa-solid fa-lock-open"></i>
+
+                    تحقق
+
+                </button>
+
+            </div>
+
+
+
+            <!-- UPLOAD AREA -->
+
+            <div
+                id="uploadArea"
+                class="upload-area hidden"
+            >
+
+
+                <!-- PROJECT FILE -->
+
+                <div class="upload-field">
+
+                    <label>
+
+                        <i class="fa-solid fa-file"></i>
+
+                        ملف المشروع
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="fileInput"
+                    >
+
+                </div>
+
+
+
+                <!-- PREVIEW IMAGE -->
+
+                <div class="upload-field">
+
+                    <label>
+
+                        <i class="fa-solid fa-image"></i>
+
+                        صورة المشروع
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="previewInput"
+                        accept="image/*"
+                    >
+
+
+                    <small class="upload-hint">
+
+                        اختر Screenshot مربعة للمشروع
+
+                    </small>
+
+                </div>
+
+
+
+                <!-- IMAGE PREVIEW -->
+
+                <div
+                    id="previewBox"
+                    class="preview-box hidden"
+                >
+
+                    <img
+                        id="previewImage"
+                        alt="Project Preview"
+                    >
+
+                </div>
+
+
+
+                <!-- UPLOAD BUTTON -->
+
+                <button
+                    type="button"
+                    class="upload-button"
+                    onclick="uploadFile()"
+                >
+
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                    رفع المشروع
+
+                </button>
+
+
+                <p id="status"></p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <footer>
+
+            © 2026 A.H.R — All Rights Reserved
+
+        </footer>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         MESSAGE
+    ====================================================== -->
+
+    <div
+        id="messagePopup"
+        class="message-popup"
+    >
+
+        <div
+            id="messageIcon"
+            class="message-icon"
+        >
+            ✓
+        </div>
+
+
+        <div class="message-text">
+
+            <strong id="messageTitle">
+                تم بنجاح
+            </strong>
+
+            <span id="messageDescription">
+                تم تنفيذ العملية
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         DELETE MODAL
+    ====================================================== -->
+
+    <div
+        id="deleteModal"
+        class="modal-overlay"
+    >
+
+        <div class="modal-box">
+
+
+            <div class="modal-icon">
+
+                <i class="fa-solid fa-trash"></i>
+
+            </div>
+
+
+            <h3>
+                حذف المشروع
+            </h3>
+
+
+            <p>
+                أدخل كلمة المرور لحذف المشروع
+            </p>
+
+
+            <input
+                type="password"
+                id="deletePassword"
+                placeholder="كلمة المرور"
+                autocomplete="off"
+            >
+
+
+            <div class="modal-buttons">
+
+                <button
+                    class="modal-cancel"
+                    onclick="closeDeleteModal()"
+                >
+                    إلغاء
+                </button>
+
+
+                <button
+                    class="modal-confirm"
+                    onclick="confirmDelete()"
+                >
+                    حذف المشروع
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SUPABASE -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"
+    ></script>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
